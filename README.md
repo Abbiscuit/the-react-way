@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The React Way
 
-## Available Scripts
+[React の流儀](https://ja.reactjs.org/docs/thinking-in-react.html)を読んで学んだコンポーネントの階層構造などを意識した開発の練習
 
-In the project directory, you can run:
+### 手順
 
-### `npm start`
+1.  UI をコンポーネント階層に落とし込む
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 単一責任の原則 (single responsibility principle) を意識
+- コンポーネントを階層構造に並べてみる
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+2.  React で静的なバージョンを作成する
 
-### `npm test`
+- 最初は、データモデルを受け取って UI の描画だけを行う、ユーザーからの操作ができないというバージョンを作る
+- props を通じてデータを渡す形で、自分のコンポーネントを組み上げていく
+- 静的なな Version を作成する際には state は必須ではない（動的なデータデータを扱うための機能）
+- コンポーネントはボトムアップでもトップダウンで作っても問題ない。大きなプロジェクトではテストを書きながら前者を、シンプルなアプリでは後者の方がら楽
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3.  UI 状態を表現する必要かつ十分な state を決定する
 
-### `npm run build`
+- アプリに求められている更新可能な状態の最小構成を、最初に考えておく
+- 動的に変化するもの、そうでないものを考えて props か state か判断する
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4.  state をどこに配置するべきなのかを明確にする
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- どのコンポーネントが state を所有するのかを明確にする
+- 共通の親コンポーネントを見つけ state を与える
+- 単方向データフローを意識する
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5.  逆方向のデータフローを追加する
 
-### `npm run eject`
+- 解読中...
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Sketch でモックアップ作成
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**ドキュメントにあるモックアップを参考に、Sketch でつくる**
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![ItemList](https://user-images.githubusercontent.com/10560950/61163395-a4a4c180-a548-11e9-9774-a7471ef1c0f0.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**フォルダ構成および階層を書き出す**
 
-## Learn More
+![component](https://user-images.githubusercontent.com/10560950/61163441-f77e7900-a548-11e9-8b91-97408010c949.jpeg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+###　コメント
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- コードを書く前段階で考えるべきことが想像以上に多くあった。
+- モックアップと JSON API のデータを元にどのようにコンポーネントに情報を持たせるか落とし込むことが大切。
+- React に限らず、設計という概念を持つ必要があると学べた。
