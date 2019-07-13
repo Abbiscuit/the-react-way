@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
+import './categoryName.style.scss';
+
 class CategoryName extends Component {
   render() {
     return (

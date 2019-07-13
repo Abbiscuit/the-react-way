@@ -4,7 +4,7 @@ class Category extends Component {
   render() {
     return (
       <tr>
-        <th>スポーツグッズ</th>
+        <th>{}</th>
       </tr>
     );
   }
