@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
+import './item.style.scss';
+
 class Item extends Component {
   render() {
     return (
