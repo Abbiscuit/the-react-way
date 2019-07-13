@@ -43,6 +43,8 @@
 
 ### やってみた感想
 
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/10560950/61167550-d5eab500-a57b-11e9-9843-a3d72a609507.gif)
+
 - コードを書く前段階で考えるべきことが想像以上に多くあった
 - #2 の静的な　 React サイトを作るだけで 4 時間ほどかかってしまった
 - React に限らず、設計という概念を持つ必要があると学べた
