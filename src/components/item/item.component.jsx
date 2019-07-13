@@ -1,20 +1,18 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 import './item.style.scss';
 
-class Item extends Component {
-  render() {
-    return (
-      <Fragment>
-        <tbody>
-          <tr key={this.props.itemlist.id}>
-            <td>{this.props.itemlist.name}</td>
-            <td>&yen; {this.props.itemlist.price}</td>
-          </tr>
-        </tbody>
-      </Fragment>
-    );
-  }
-}
+const Item = ({ filteredItem }) => {
+  return (
+    <Fragment>
+      <tbody>
+        <tr key={filteredItem.id}>
+          <td>{filteredItem.name}</td>
+          <td>&yen; {filteredItem.price}</td>
+        </tr>
+      </tbody>
+    </Fragment>
+  );
+};
 
 export default Item;

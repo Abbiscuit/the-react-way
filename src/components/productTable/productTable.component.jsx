@@ -4,13 +4,17 @@ import Item from '../item/item.component';
 
 import './productTable.style.scss';
 
-const ProductTable = ({ itemlist, searchfield }) => {
+const ProductTable = ({ filteredItems, isStock }) => {
   return (
     <div className="product-table">
       <table>
         <CategoryName />
-        {itemlist.map(item => (
-          <Item itemlist={item} key={item.id} />
+        {filteredItems.map(filteredItem => (
+          <Item
+            filteredItem={filteredItem}
+            key={filteredItem.id}
+            isStock={isStock}
+          />
         ))}
       </table>
     </div>

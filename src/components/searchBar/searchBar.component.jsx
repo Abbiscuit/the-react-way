@@ -2,7 +2,7 @@ import React from 'react';
 
 import './searchBar.style.scss';
 
-const SearchBar = ({ isStock, onSearchChange }) => {
+const SearchBar = ({ onCheckbox, onSearchChange }) => {
   return (
     <div className="search-bar">
       <input
@@ -11,17 +11,17 @@ const SearchBar = ({ isStock, onSearchChange }) => {
         placeholder="商品検索..."
         onChange={onSearchChange}
       />
-      <div className="check-stock">
+      {/* <div className="check-stock">
         <input
           className="check-stock-box"
           type="checkbox"
           name="stock"
           id="stock"
-          value={isStock}
+          onChange={onCheckbox}
         />
 
         <label htmlFor="stock"> 在庫品のみ表示</label>
-      </div>
+      </div> */}
     </div>
   );
 };
