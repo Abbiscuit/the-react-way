@@ -9,7 +9,7 @@ class Item extends Component {
         <tbody>
           <tr key={this.props.itemlist.id}>
             <td>{this.props.itemlist.name}</td>
-            <td>{this.props.itemlist.price}</td>
+            <td>&yen; {this.props.itemlist.price}</td>
           </tr>
         </tbody>
       </Fragment>
